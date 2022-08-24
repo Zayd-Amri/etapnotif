@@ -1,0 +1,88 @@
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <app-sidebar></app-sidebar>
+      <div class="container-fluid">
+        <div
+          class="card text-center"
+          style="width: 80%; margin: auto; position: relative"
+        >
+          <div class="card-header">Add contract</div>
+          <div class="card-body">
+            <div *ngIf="error" class="alert alert-danger" role="alert">
+              Error while adding the contract
+            </div>
+            <div *ngIf="success" class="alert alert-success" role="alert">
+              contract Added
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="name">Start date</label>
+                <input
+                  name="offre_name"
+                  type="date"
+                  class="form-control input-lg"
+                  id="offre_name"
+                  placeholder="Start date"
+                  required=""
+                  [(ngModel)]="startDate"
+                />
+              </div>
+              <br />
+  
+              <div class="form-group">
+                <label for="name">Due date</label>
+                <input
+                  name="offre_name"
+                  type="date"
+                  class="form-control input-lg"
+                  id="offre_name"
+                  placeholder="Due date"
+                  required=""
+                  [(ngModel)]="dueDate"
+                />
+              </div>
+              <br />
+  
+  
+  
+              <div class="form-group">
+                <label for="region">Name</label>
+                <input
+                  name="name"
+                  type="text"
+                  class="form-control input-lg"
+                  placeholder="Name"
+                  [(ngModel)]="name"
+                />
+              </div>
+              <br />
+  
+  
+              <div class="form-group">
+                <label for="region">Description</label>
+                <input
+                  name="description"
+                  type="text"
+                  class="form-control input-lg"
+                  placeholder="description"
+                  [(ngModel)]="description"
+                />
+              </div>
+              <br />
+  
+             
+  
+              <button
+                class="btn btn-primary float-right m-5"
+                (click)="addContract()"
+              >
+                Add Contract
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  
